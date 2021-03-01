@@ -14,7 +14,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/product/new", name="app_product_new")
+     * @Route("/hru/rubrique/new", name="app_product_new")
      */
     public function new(Request $request, SluggerInterface $slugger)
     {

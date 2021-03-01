@@ -11,6 +11,27 @@
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
     <p>le nom du fichier est {{fichier}}</p>
-    <p> {{num}} champs à la ligne {{row}} : <br /></p>\n";
+
+    <p> {{num}} champs à la ligne {{row}} : <br /></p>
+
+    {% for rubriquehru in rubriquehrus %}
+        <p>le code ccn {{rubriquehru.ccn}} le libelle {{rubriquehru.libelle}} le code rubrique {{rubriquehru.rubrique}}</p>
+
+    {%endfor%}  
+    {% for libelle in libelles %}
+        <p>le libelle est {{libelle}}</p>
+        
+    {%endfor%}
+
+    {% for coderubrique in codesrubriques %}
+        <p>le code rubrique est {{coderubrique}}</p>
+        
+    {%endfor%}  
+
+
+    {% for ccn in ccns %}
+        <p>le code ccn {{ccn}}</p>
+        
+    {%endfor%}  
 </div>
 {% endblock %}
