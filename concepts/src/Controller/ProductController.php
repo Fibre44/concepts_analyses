@@ -13,6 +13,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 class ProductController extends AbstractController
 {
+
     /**
      * @Route("/hru/rubrique/new", name="app_product_new")
      */

@@ -1,37 +1,8 @@
-{% extends 'base.html.twig' %}
+    {% extends 'base.html.twig' %}
 
-{% block title %}Compte rendu de l'import!{% endblock %}
+    {% block title %}accueil test{% endblock %}
+    {% block description %}This page will render a simple form to upload a file.{% endblock %}
+    {% block content %}
+     <h1>accueil</h1>
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-    <p>le nom du fichier est {{fichier}}</p>
-
-    <p> {{num}} champs à la ligne {{row}} : <br /></p>
-
-    {% for rubriquehru in rubriquehrus %}
-        <p>le code ccn {{rubriquehru.ccn}} le libelle {{rubriquehru.libelle}} le code rubrique {{rubriquehru.rubrique}}</p>
-
-    {%endfor%}  
-    {% for libelle in libelles %}
-        <p>le libelle est {{libelle}}</p>
-        
-    {%endfor%}
-
-    {% for coderubrique in codesrubriques %}
-        <p>le code rubrique est {{coderubrique}}</p>
-        
-    {%endfor%}  
-
-
-    {% for ccn in ccns %}
-        <p>le code ccn {{ccn}}</p>
-        
-    {%endfor%}  
-</div>
-{% endblock %}
+    {% endblock %}

@@ -1,0 +1,33 @@
+    {% extends 'base.html.twig' %}
+
+    {% block title %}liste des rubriques{% endblock %}
+    {% block description %}This page will render a simple form to upload a file.{% endblock %}
+    {% block body %}
+
+     <h1>liste des rubriques</h1>
+
+        <table class="rubriques">
+        
+            <thead>
+                <tr>               
+                        <th>CCN</th>
+                        <th>Rubrique</th>
+                        <th>Libelle</th>               
+                </tr>               
+            
+            </thead>
+            <tbody>
+
+                {%for rubriqueshru in rubriqueshrus %}
+                    <tr>
+                        <th>{{rubriqueshru.ccn}}</td>
+                        <th>{{rubriqueshru.code}}</td>
+                        <th>{{rubriqueshru.libelle}}</td>                           
+                                    
+                    </tr>
+
+                {%endfor%}            
+            </tbody>
+        </table>
+
+    {% endblock %}
