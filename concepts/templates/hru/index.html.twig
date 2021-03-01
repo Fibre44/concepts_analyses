@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HruController!{% endblock %}
+{% block title %}Compte rendu de l'import!{% endblock %}
 
 {% block body %}
 <style>
@@ -10,11 +10,7 @@
 
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/ndenis/Documents/concepts_analyses/concepts/src/Controller/HruController.php'|file_link(0) }}">src/Controller/HruController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/ndenis/Documents/concepts_analyses/concepts/templates/hru/index.html.twig'|file_link(0) }}">templates/hru/index.html.twig</a></code></li>
-    </ul>
+    <p>le nom du fichier est {{fichier}}</p>
+    <p> {{num}} champs à la ligne {{row}} : <br /></p>\n";
 </div>
 {% endblock %}
