@@ -1,0 +1,39 @@
+    {% extends 'base.html.twig' %}
+
+    {% block title %}accueil test{% endblock %}
+    {% block description %}This page will render a simple form to upload a file.{% endblock %}
+    {% block body %}
+    <p>Client {{client.raisonsociale}}</p>
+
+    <table class="rubriques">
+        
+            <thead>
+                <tr>               
+                        <th>CCN</th>
+                        <th>Rubrique</th>
+                        <th>Libelle</th>
+                        <th>Auteur</th> 
+                        <th>Ajouter une surcharge</th>                      
+                        <th>Voir les surcharge</th>                      
+
+               
+                </tr>               
+            
+            </thead>
+            <tbody>
+
+                {%for rubriqueshru in rubriquehrus %}
+                    <tr>
+                        <th>{{rubriqueshru.ccn}}</th>
+                        <th>{{rubriqueshru.code}}</th>
+                        <th>{{rubriqueshru.libelle}}</th>                           
+                        <th>{{rubriqueshru.auteur}}</th>                           
+                        <th><a href="{{ path('add_surcharge',{'idclient':client.id,'idrubrique':rubriqueshru.code})}}" class="btn btn-primary">Ajouter une surcharge</a></th>                                
+                        <th><a href="{{ path('show_surcharge',{'idclient':client.id,'idrubrique':rubriqueshru.code})}}" class="btn btn-primary">Voir surcharge</a></th>                                
+
+                    </tr>
+
+                {%endfor%}            
+            </tbody>
+        </table>
+    {% endblock %}

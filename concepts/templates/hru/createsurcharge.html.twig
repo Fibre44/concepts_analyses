@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+{%block body %}
+
+    {{ form_start(formSurcharge)}}
+
+    {{form_row(formSurcharge.libelle,{'attr': {'placeholder':"Indiquer le libellé de la rubrique"}}) }}
+   
+    <button type="submit" class="btn btn-primary">
+        Enregistrer
+
+    </button>
+
+    {{form_end(formSurcharge)}}
+
+{%endblock%}

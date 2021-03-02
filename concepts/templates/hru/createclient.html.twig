@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{%block body %}
+
+    {{ form_start(formClient)}}
+
+    {{form_row(formClient.raisonsociale,{'attr': {'placeholder':"Indiquer la raison social du client"}}) }}
+    {{form_row(formClient.ccnclient,{'attr': {'placeholder':"Indiquer la ccn du client"}})}}
+   
+    <button type="submit" class="btn btn-primary">
+        Enregistrer
+
+    </button>
+
+    {{form_end(formClient)}}
+
+{%endblock%}

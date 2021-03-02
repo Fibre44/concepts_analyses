@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\RubriqueclientRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -37,6 +39,13 @@ class Rubriqueclient
      * @ORM\JoinColumn(nullable=false)
      */
     private $client;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Surcharge::class, mappedBy="rubriqueclient", orphanRemoval=true)
+     */
+    public function __construct()
+    {
+    }
 
     public function getId(): ?int
     {
@@ -90,4 +99,6 @@ class Rubriqueclient
 
         return $this;
     }
+
+   
 }

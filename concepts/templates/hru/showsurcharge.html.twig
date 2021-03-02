@@ -3,4 +3,10 @@
     {% block title %}accueil test{% endblock %}
     {% block description %}This page will render a simple form to upload a file.{% endblock %}
     {% block body %}
+
+    {%for surcharge in surcharges%}
+
+        <p>{{surcharge.libelle}}</p>
+
+    {%endfor%}
     {% endblock %}

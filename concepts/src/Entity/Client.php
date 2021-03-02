@@ -29,6 +29,11 @@ class Client
      */
     private $rubriqueclients;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ccnclient;
+
     public function __construct()
     {
         $this->rubriqueclients = new ArrayCollection();
@@ -77,6 +82,18 @@ class Client
                 $rubriqueclient->setClient(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCcnclient(): ?string
+    {
+        return $this->ccnclient;
+    }
+
+    public function setCcnclient(string $ccnclient): self
+    {
+        $this->ccnclient = $ccnclient;
 
         return $this;
     }

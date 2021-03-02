@@ -32,6 +32,11 @@ class Rubriquehru
      */
     private $code;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $auteur;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +74,18 @@ class Rubriquehru
     public function setCode(string $code): self
     {
         $this->code = $code;
+
+        return $this;
+    }
+
+    public function getAuteur(): ?string
+    {
+        return $this->auteur;
+    }
+
+    public function setAuteur(string $auteur): self
+    {
+        $this->auteur = $auteur;
 
         return $this;
     }

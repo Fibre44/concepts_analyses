@@ -1,0 +1,32 @@
+    {% extends 'base.html.twig' %}
+
+    {% block title %}accueil test{% endblock %}
+    {% block description %}This page will render a simple form to upload a file.{% endblock %}
+    {% block body %}
+    <table class="Clients">
+        
+            <thead>
+                <tr>               
+                        <th>Id client</th>
+                        <th>Raison sociale</th>
+                        <th>CCN</th>
+                        <th>Detail client</th>        
+               
+                </tr>               
+            
+            </thead>
+            <tbody>
+
+                {%for client in clients %}
+                    <tr>
+                        <th>{{client.id}}</th>
+                        <th>{{client.raisonsociale}}</th>
+                        <th>{{client.ccnclient}}</th>                                
+                        <th><a href="{{ path('hru_client_show',{'idclient':client.id,'idccn':client.ccnclient})}}" class="btn btn-primary">Rubriques client</a></th>                                
+                
+                    </tr>
+
+                {%endfor%}            
+            </tbody>
+        </table>
+    {% endblock %}
